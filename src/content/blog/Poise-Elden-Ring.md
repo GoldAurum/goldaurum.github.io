@@ -7,4 +7,6 @@ image: '/assets/Y5RHNmzAtc6sRYwZlYiKHAxN.png'
 ---
 ¿Que es el poise?
 
-El poise o aplomo es un atributo que determina tu capacidad para recibir golpes sin ser aturdido.
+El poise o aplomo es un atributo que determina tu capacidad para recibir golpes sin ser aturdido. Para entenderlo mejor pensad en ello como una barra, como la barra de vida, cuando recibes un golpe ademas de recibir daño, tambien recibes daño de aplomo. 
+Cuando esa barra llegue a cero tendras una animacion de aturdimiento
+
