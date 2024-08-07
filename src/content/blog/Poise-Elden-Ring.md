@@ -25,4 +25,4 @@ Desde el parche 1.10 del juego todos los valores cambiaron aqui una lista hecha 
 
 Despues del parche 1.12 (parche antes del DLC) volvieron a cambiar y añadieron mas por las nuevas armas: [Aqui](https://docs.google.com/spreadsheets/d/1j4bpTbsnp5Xsgw9TP2xv6d8R4qk0ErpE9r_5LGIDraU/edit?gid=419422255#gid=419422255)
 
-y en el parche actual (1.13) estos son los breakpoints: [Aqui](https://docs.google.com/spreadsheets/d/1j4bpTbsnp5Xsgw9TP2xv6d8R4qk0ErpE9r_5LGIDraU/edit?gid=419422255#gid=419422255)
+y en el parche actual (1.13) estos son los breakpoints: <a href="Url">https://docs.google.com/spreadsheets/d/1j4bpTbsnp5Xsgw9TP2xv6d8R4qk0ErpE9r_5LGIDraU/edit?gid=419422255#gid=419422255</a>
