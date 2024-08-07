@@ -10,3 +10,5 @@ image: '/assets/Y5RHNmzAtc6sRYwZlYiKHAxN.png'
 El poise o aplomo es un atributo que determina tu capacidad para recibir golpes sin ser aturdido. Para entenderlo mejor pensad en ello como una barra, como la barra de vida, cuando recibes un golpe ademas de recibir daño, tambien recibes daño de aplomo. 
 Cuando esa barra llegue a cero tendras una animacion de aturdimiento
 
+El juego cuenta con varias cenizas de guerra (habilidades de armas) con la capacidad de resetear esta barra.
+
