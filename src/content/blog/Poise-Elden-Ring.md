@@ -21,4 +21,4 @@ En PvE, la mayoría de ataques que pueden tankearse del juego hacen 50 de daño 
 
 En PvP, el daño de poise de cada ataque es dependiente del tipo de arma. 
 
-Desde el parche 1.08 del juego todos los valores cambiaron aqui una lista hecha por Basscannon90: 
+Desde el parche 1.08 del juego todos los valores cambiaron aqui una lista hecha por Basscannon90: ![Aqui](https://docs.google.com/spreadsheets/d/1pHudihNsTW3LNP9-AqPKybhwyftl5QI1pD09kl986Ok/edit#gid=0)
