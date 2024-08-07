@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Global.astro';
+import { getCollection } from 'astro:content';
+import { Icon } from 'astro-icon/components';
+const posts = await getCollection('blog');
+---
+<Layout>
+<html lang="es">
+	<body>
+		<div class="post-list">
+			<header>
+				<h1 class="title">blog aurum *eructo* coño</h1>
+				<p class="subtitle">hola bienvenidos a mi epico blog</p>
+			</header>
+
+			<ul>
+			{posts.map((post) => (
+				<li>
+					<a class="post-card" href={`/blog/${post.slug}`}>
+						<img src={post.data.image} />
+						<div class="post-info">
+							<h1 class="post-title">{post.data.title}</h1>
+							<span class="post-description">
+								<Icon name="material-symbols:description-outline" />
+								<p>{post.data.description}</p>
+							</span>
+							<span class="post-description">
+								<Icon name="mdi:clock-outline" />
+								<p>
+									{post.data.date.toLocaleString('es-ES', {
+										day: '2-digit',
+										month: '2-digit',
+										year: 'numeric'
+									})}
+								</p>
+							</span>
+						</div>
+					</a>
+				</li>
+			))}
+			</ul>
+		</div>
+	</body>
+</html>
+</Layout>
+
+<style>
+	header {
+		text-align: center;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		list-style: none;
+		width: auto;
+		margin-top: 8px;
+	}
+
+	h1 {
+		padding: 0;
+		margin: 0;
+	}
+</style>

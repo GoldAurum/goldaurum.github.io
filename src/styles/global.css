@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 600;
+}
+
+body {
+    background-color: #afa3bf;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23696273' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+    color: white;
+    padding: 15px;
+    margin: 0;
+    font-size: 18px;
+}
+
+#main {
+    max-width: 1200px;
+    min-width: 300px;
+    margin: auto;
+    height: auto;
+    backdrop-filter: blur(5px);
+    background-color: #52207357;
+    object-fit: contain;
+    border: 1px solid #522073;
+    border-radius: 15px;
+    position: relative;
+    z-index: 4;
+}
+
+#main #content {
+    z-index: 5;
+    position: relative;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid #522073;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.post-list .title {
+    font-size: 48px;
+    margin-bottom: 0;
+}
+
+.post-list .subtitle {
+    margin-top: 0;
+}
+
+.post-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.1s;
+    border-radius: 0 15px 15px 0;
+    overflow: hidden;
+}
+
+.post-card:hover {
+    background-color: rgba(255, 255, 255, 0.192);
+}
+
+.post-card img {
+    width: 200px !important;
+    height: 150px !important;
+    padding: 0;
+    margin: 0;
+    margin-right: 8px;
+    border-radius: 0 15px 15px 0;
+}
+
+.post-title {
+    margin-bottom: 0;
+}
+
+.post-description {
+    padding: 0;
+    margin-top: 0;
+    font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.post-description p {
+    margin: 0;
+    margin-left: 4px;
+}
+
+.post-content, .post-list {
+    margin: 16px;
+}
+
+.post-header .back:hover, .post-header .back:hover:after {
+    transition: 0.1s;
+    font-size: 20px;
+}
+
+.post-header .back, .post-header .back:after {
+    transition: 0.1s;
+    z-index: 3;
+}
+
+.post-header .back {
+    margin: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.post-header .back:after {
+    content: "Volver";
+    opacity: 0;
+    transition: 0.1s;
+}
+
+.post-header .back:hover:after {
+    content: "Volver";
+    opacity: 1;
+    font-size: 20px;
+}
+
+.post-header h1 {
+    margin-top: 0;
+}
+
+.post-header {
+    min-height: 150px;
+    background-color: rgba(0, 0, 0, 0.699);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-header img {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    margin: 0;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}
+
+.post-header, .post-header img {
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    box-shadow: inset 0 -60px 60px 0 rgba(0, 0, 0, 0.75);
+}
+
+.post-image-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    position: relative;
+}
+
+.post-content img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-radius: 15px;
+}
+
+.cirno {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 16px;
+    z-index: 10;
+    transform: translateY(200px);
+    transition: 1s;
+}
+
+.cirno.active {
+    transform: translateY(0);
+}
+
+.cirno img {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: auto;
+    transition: 0.25s;
+    animation: cirno 0.35s ease-in-out infinite;
+    transform-origin: bottom;
+}
+
+@keyframes rainbow {
+    0% { color: red;  }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+}
+
+arcoiris, rbw, rainbow {
+    animation: rainbow 3s ease-in-out infinite;
+}
+
+
+@keyframes cirno {
+    0% { transform: scaleY(0.7); }
+    80% { transform: scaleY(1); }
+}
+
+colore {
+    color: #522073;
+    color: #8416F2;
+    color: #7021BF;
+    color: #AFA3BF;
+    color: #696273;
+}

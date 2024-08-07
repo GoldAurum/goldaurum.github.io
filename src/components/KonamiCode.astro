@@ -1,0 +1,36 @@
+<script>
+import { konamiCodes } from "../consts/konamiCodes";
+import { Konami } from "../function/konami";
+const { cirno } = konamiCodes;
+
+let konamiCodeInprogress = false;
+
+document.addEventListener("keydown", ({ key }) => {
+    Konami({
+        code: cirno,
+        keyPressed: key,
+        onFinishTime: 10000,
+        onSuccess: () => {
+            if (konamiCodeInprogress) return;
+            konamiCodeInprogress = true;
+
+            let cirno = document.getElementsByClassName("cirno")[0]
+            if (cirno.classList.contains("active")) return
+
+            var audio = new Audio("/cirno/funky.mp3");
+            audio.fastSeek(0);
+            audio.play();
+
+            cirno.classList.add("active");
+        },
+        onFinish: () => {
+            if (konamiCodeInprogress) konamiCodeInprogress = false;
+
+            let cirno = document.getElementsByClassName("cirno")[0]
+            if (!cirno.classList.contains("active")) return
+
+            cirno.classList.remove("active");
+        }
+    })
+})
+</script>

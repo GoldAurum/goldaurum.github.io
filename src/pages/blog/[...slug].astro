@@ -1,0 +1,58 @@
+---
+import Layout from '../../layouts/Global.astro';
+import { CollectionEntry, getCollection } from 'astro:content';
+
+import { Icon } from 'astro-icon/components';
+
+export async function getStaticPaths() {
+    const posts = await getCollection('blog');
+    return posts.map((post) => ({
+        params: { slug: post.slug },
+        props: post
+    }))
+}
+
+type Props = CollectionEntry<'blog'>;
+const post = Astro.props;
+const { Content } = await post.render();
+---
+<Layout title={post.data.title}>
+<div class="post-header">
+    <img class="post-image" src={post.data.image}/>
+    <a class="back" href="/"><Icon name="icon-park-solid:back" /></a>
+    <div class="post-image-overlay">
+        <h1 class="post-title">{post.data.title}</h1>
+        <span class="post-description">
+            <Icon name="material-symbols:description-outline" />
+            <p>{post.data.description}</p>
+        </span>
+        <span class="post-description">
+            <Icon name="mdi:clock-outline" />
+            <p>
+                {post.data.date.toLocaleString('es-ES', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric'
+                })}
+            </p>
+        </span>
+    </div>
+</div>
+<div class="post-content">
+    <Content />
+</div>
+</Layout>
+
+<style>
+    img {
+        object-fit: contain;
+    }
+
+    .post-header {
+        position: relative;
+    }
+
+    .post-header img {
+        position: absolute;
+    }
+</style>
